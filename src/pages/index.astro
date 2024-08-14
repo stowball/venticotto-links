@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Link from '../components/Link.astro';
+---
+
+<Layout title="Venticotto links">
+	<main
+		class={`
+			flex
+			flex-col
+			gap-9
+			items-center
+			justify-center
+			min-h-screen
+			px-3
+			py-5
+			text-center
+		`}
+	>
+		<div
+			class={`
+			bg-white
+			w-screen
+			p-3
+		`}
+		>
+			<h1
+				class={`
+			inline-block
+			font-extrabold
+			leading-tight
+			text-[clamp(2.25rem,_2vw_+_2rem,_4.25rem)]
+			bg-gradient-to-r from-[#310CD6] to-[#D60C0F]
+			text-transparent
+			bg-clip-text
+			uppercase
+		`}
+			>
+				Venticotto
+			</h1>
+		</div>
+		<div
+			class={`
+			flex
+			flex-col
+			gap-5
+			items-center
+			justify-center
+		`}
+		>
+			<p
+				class={`
+			text-gray-100
+			text-xl
+		`}
+			>
+				A quick, engaging card game of fun, luck, strategy and hidden depth!
+			</p>
+			<p class="text-gray-200">Designed by Matt Stow</p>
+		</div>
+		<ul class=`
+			flex
+			flex-col
+			gap-4
+			max-w-80
+			w-full
+		`>
+			<!-- <Link href="#" label="Watch an overview" icon="youtube-color" />
+			<Link href="#" label="View the Sell Sheet" icon="google-drive-color" /> -->
+			<Link
+				href="https://docs.google.com/document/d/1RLVBWbKVQBsA6xsd1SrwKaNX6a_j39glZ5fJfixpj0c/edit?usp=sharing"
+				label="Read the rules"
+				icon="google-docs-color"
+			/>
+			<Link
+				href="https://screentop.gg/@stowball1/venticotto"
+				label="Play on Screentop.gg"
+				icon="screentop"
+			/>
+			<Link
+				href="https://drive.google.com/drive/folders/133nfFfYg22oUpc9_0zBnrXxI8No74xk0?usp=sharing"
+				label="Get the Print and Play"
+				icon="printer"
+			/>
+			<Link
+				href="mailto:matt@mattstow.com?subject=Venticotto"
+				label="Email me"
+				icon="email"
+			/>
+		</ul>
+	</main>
+</Layout>
