@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Link from '../components/Link.astro';
+import LinkMuted from '../components/LinkMuted.astro';
 ---
 
 <Layout title="Venticotto links">
@@ -37,21 +38,12 @@ import Link from '../components/Link.astro';
 				Venticotto
 			</h1>
 		</div>
-		<div class=`
-			flex
-			flex-col
-			gap-5
-			items-center
-			justify-center
-		`>
-			<p class=`
+		<p class=`
 				text-gray-100
 				text-xl
 			`>
-				A quick, engaging card game of fun, luck, strategy and hidden depth!
-			</p>
-			<p class="text-gray-200">Designed by Matt Stow</p>
-		</div>
+			A quick, engaging card game of fun, luck, strategy and hidden&nbsp;depth!
+		</p>
 		<ul class=`
 			flex
 			flex-col
@@ -84,11 +76,31 @@ import Link from '../components/Link.astro';
 				icon="printer"
 				label="Get the Print and Play"
 			/>
-			<Link
+			<LinkMuted
 				href="mailto:matt@mattstow.com?subject=Venticotto"
 				icon="email"
 				label="Email me"
 			/>
 		</ul>
+		<div class=`
+			flex
+			flex-col
+			gap-4
+			max-w-80
+			w-full
+		`>
+			<h2 class="text-gray-100">You might also like:</h2>
+			<ul class=`
+				flex
+				gap-4
+			`>
+				<LinkMuted href="https://push-up.mattstow.com" label="Push-Up!" />
+				<LinkMuted
+					href="https://not-so-fast.mattstow.com"
+					label="Not So Fast"
+				/>
+			</ul>
+		</div>
+		<p class="text-gray-100">Designed by Matt Stow</p>
 	</main>
 </Layout>
